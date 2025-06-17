@@ -1,0 +1,336 @@
+{
+	"info": {
+		"name": "Fake Address API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all addresses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/addresses",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"addresses"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/addresses?state=<string>&zip=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"addresses"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "<string>"
+								},
+								{
+									"key": "zip",
+									"value": "<string>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "get addresses by state",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/addresses?state=RI",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"addresses"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "RI"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/addresses?state=<string>&zip=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"addresses"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "<string>"
+								},
+								{
+									"key": "zip",
+									"value": "<string>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "get addresses by zip",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/addresses?zip=02814",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"addresses"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "02814"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/addresses?state=<string>&zip=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"addresses"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "<string>"
+								},
+								{
+									"key": "zip",
+									"value": "<string>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "create new addresses",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"count\": \"1000\"\n}",
+					"options": {
+						"raw": {
+							"headerFamily": "json",
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/new-addresses",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"new-addresses"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"count\": \"<integer>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/addresses",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"addresses"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "append addresses",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"count\": \"1000\"\n}",
+					"options": {
+						"raw": {
+							"headerFamily": "json",
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/append-addresses",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"append-addresses"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"count\": \"<integer>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/addresses",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"addresses"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://localhost:7074"
+		}
+	]
+}

@@ -1,22 +1,22 @@
 # Fake Address API
-The Fake Address API is a simple quick way to generate addresses for testing purposes.  Everything is stored in memory so there is no static data except one [Default address](#default-address)
+The Fake Address API utilizes the [Bogus](https://www.nuget.org/packages/Bogus) package to generate addresses for testing purposes.  Everything is stored in memory so there is no static data except one [default address](#default-address).
 
 ## API Endpoints
 - GET `/addresses` - returns all addresses
 - GET `/addresses?state=<state>` - returns addresses in a specific state
 - GET `/addresses?zip=<zip>` - returns addresses in a specific zip code
-- POST `/new-addresses` - wipes out current addresses and creates new addresses
+- POST `/new-addresses` - clears current addresses and creates new addresses based on the body `count` input property
 
   ```json
   {
-    "count": <address count>
+    "count": 1000
   }
   ```
-- POST `/append-addresses` - appends new addresses
+- POST `/append-addresses` - appends new addresses based on the body `count` input property
 
   ```json
   {
-    "count": <address count>
+    "count": 100
   }
   ```
 
